@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
+
+    <link rel="stylesheet" href="css/styes.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,45 +19,64 @@
 
             <h1>Password Generator</h1>
 
-            <div class="output"></div>
+            <div class="generator-container">
 
-            <form action="#" class="form">
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="range" name="pswd-len" id="">
-                </div>
+                <p class="output"></p>
 
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="checkbox" name="numbers" id="">
-                </div>
+                <form action="#" class="form">
+                    <div class="form-field">
+                        <label for="">Characters: <span class="len-container"></span></label>
+                        <input type="range" name="pswd-len" class="len-slider" min="0" max="30">
+                    </div>
 
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="checkbox" name="letters" id="">
-                </div>
+                    <div class="form-field">
+                        <input type="checkbox" name="numbers" class="numbers" checked>
+                        <label for="">Include numbers (1234)</label>
+                        
+                    </div>
 
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="checkbox" name="capital-letters" id="">
-                </div>
+                    <div class="form-field">
+                        <input type="checkbox" name="symbols" class="symbols">
+                        <label for="">Include symbols (@!#$)</label>
+                    </div>
 
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="checkbox" name="special-chars" id="">
-                </div>
+                    <div class="form-field">
+                        <input type="checkbox" name="lower-letters" class="lower-letters">
+                        <label for="">Include lowercase letters (abc)</label>
+                        
+                    </div>
 
-                <div class="form-field">
-                    <label for=""></label>
-                    <input type="text" name="add-char" id="">
-                </div>
-                
+                    <div class="form-field">
+                        <input type="checkbox" name="upper-letters" class="upper-letters">
+                        <label for="">Include uppercase letters (ABC)</label>
+                        
+                    </div>
 
-            </form>
+                    <!--
+                    <div class="form-field">
+                        <label for="">Add a new character:</label>
+                        <input type="text" name="add-char" id="">
+                    </div>
+
+                    <div class="new-character"></div>
+                    -->
+
+                    <div class="btn-container">
+                        <button type="submit" class="btn">Generate</button>
+                    </div>
+                    
+
+                </form>
+
+            </div>
+
+
         </div>
     </main>
 
     <footer></footer>
-    
+
+
+    <script src="js/main.js"></script>
 </body>
 </html>

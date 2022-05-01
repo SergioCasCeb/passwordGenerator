@@ -1,0 +1,221 @@
+/** Gobals **/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /*Fonts styles*/
+  --ff-primary: 'Source Sans Pro', sans-serif;
+  --ff-secondary: 'Roboto', sans-serif;
+  /*Font weights*/
+  /*Font sizes*/
+  --fs-h1: 4rem;
+  --fs-h2: 3.5rem;
+  --fs-h3: 2.25rem;
+  --fs-pts: 3.5rem;
+  --fs-body: 1.75rem;
+  --fs-btn: 1.5rem;
+  /*colors*/
+  --clr-light: #FFFFFF;
+  --clr-dark: #000000;
+  --clr-accent: #66fcf1;
+  --clr-hvr: #45A29E;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--fs-body);
+    font-family: var(--ff-secondary);
+    line-height: 1.5;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  }
+  
+  h1,
+  h2,
+  h3 {
+    font-family: var(--ff-primary);
+  }
+  
+  h1 {
+    font-size: var(--fs-h1);
+    text-align: center;
+    margin: 4rem 0 6rem 0;
+  }
+  
+  h2 {
+    font-size: var(--fs-h2);
+  }
+  
+  h3 {
+    font-size: var(--fs-h3);
+  }
+
+  .btn{
+      padding: .5em .75em;
+      display: block;
+      width: 100%;
+      border: none;
+      font-weight: bold;
+      border-radius: 50vw;
+      cursor: pointer;
+      background-color: #FFFFFF;
+      font-size: var(--fs-btn);
+      transition: all 250ms ease-in;
+  }
+
+  .btn:hover{
+    background-color: #385F71;
+    color: #FFFFFF;
+  }
+
+
+
+/* Utilities */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+
+
+/*Main content*/
+
+
+.generator-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin: 4rem 0;
+    box-shadow: 0px 0px 15px #000000;
+
+    .output{
+        width: 100%;
+        height: 4rem;
+        margin-bottom: 3rem;
+        border-radius: 1rem;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 20px #c3cfe2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .form{
+        width: 100%;
+        .form-field{
+            margin-bottom: 2rem;
+        }
+    
+        .form-field:nth-child(1){
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            input{
+                width: 100%;
+            }
+            label{
+                font-size: 1.4rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .form-field:nth-child(6){
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            label{
+                width: 70%;
+            }
+            input{
+                width: 30%;
+            }
+    
+           
+        } 
+
+        input[type=range] {
+          -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+          width: 100%; /* Specific width is required for Firefox. */
+          background: #FFFFFF; /* Otherwise white in Chrome */
+          border-radius: 50vw;
+          height: 1rem;
+        }
+        
+        input[type=range]:focus {
+          outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+        }
+        
+        input[type=range]::-ms-track {
+          width: 100%;
+          cursor: pointer;
+        
+          /* Hides the slider so custom styles can be added */
+          background: transparent; 
+          border-color: transparent;
+          color: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          border: none;
+          height: 3rem;
+          width: 3rem;
+          border-radius: 50%;
+          background: #385f71;
+          cursor: pointer;
+          margin-top: -14px;
+        }
+        
+        /* All the same stuff for Firefox */
+        
+        input[type=range]::-moz-range-thumb {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          background: #385f71;
+          cursor: pointer;
+          border: none;
+        }
+        
+        /* All the same stuff for IE */
+        
+        input[type=range]::-ms-thumb {
+          height: 2rem;
+          width: 2rem;
+          border-radius: 50%;
+          background: #385f71;
+          cursor: pointer;
+          border: none;
+        }
+        
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+  .generator-container{
+    width: 60%;
+    margin: 4rem auto;
+
+    
+    
+  }
+}
