@@ -87,6 +87,9 @@ h3 {
 }
 
 /*Main content*/
+main{
+  min-height: 100vh;
+}
 .generator-container {
   width: 100%;
   display: -webkit-box;
