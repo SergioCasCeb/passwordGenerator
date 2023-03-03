@@ -21,62 +21,55 @@
 
             <div class="generator-container">
 
-                <p class="output"></p>
+                <div class="output-container">
+                    <p class="output"></p>
+                    <div class="output-copy">
+                        <i class="fa-solid fa-copy"></i>
+                        <p class="success-msg">Copied!</p>
+                    </div>
+                </div>
 
                 <form action="#" class="form">
+                    <p class="character-num">Characters: <span class="len-container"></span></p>
                     <div class="form-field">
-                        <label for="">Characters: <span class="len-container"></span></label>
-                        <input type="range" name="pswd-len" class="len-slider" min="0" max="30">
+                        <p class="min">4</p>
+                        <input type="range" name="pswd-len" class="len-slider" min="4" max="30">
+                        <p class="max">30</p>
                     </div>
 
+                    <p class="character-num">Requirements</p>
                     <div class="form-field">
+                        <label for="">Include Numbers</label>
                         <input type="checkbox" name="numbers" class="numbers" checked>
-                        <label for="">Include numbers (1234)</label>
-                        
                     </div>
 
                     <div class="form-field">
+                        <label for="">Include Symbols</label>
                         <input type="checkbox" name="symbols" class="symbols">
-                        <label for="">Include symbols (@!#$)</label>
                     </div>
 
                     <div class="form-field">
+                        <label for="">Include Lowercase</label>
                         <input type="checkbox" name="lower-letters" class="lower-letters">
-                        <label for="">Include lowercase letters (abc)</label>
                         
                     </div>
 
                     <div class="form-field">
+                        <label for="">Include Uppercase</label>
                         <input type="checkbox" name="upper-letters" class="upper-letters">
-                        <label for="">Include uppercase letters (ABC)</label>
-                        
                     </div>
-
-                    <!--
-                    <div class="form-field">
-                        <label for="">Add a new character:</label>
-                        <input type="text" name="add-char" id="">
-                    </div>
-
-                    <div class="new-character"></div>
-                    -->
 
                     <div class="btn-container">
-                        <button type="submit" class="btn">Generate</button>
+                        <button type="submit" class="btn">Generate Password</button>
                     </div>
-                    
-
                 </form>
-
             </div>
-
-
         </div>
     </main>
 
     <footer></footer>
 
-
+    <script src="https://kit.fontawesome.com/d66d421276.js" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

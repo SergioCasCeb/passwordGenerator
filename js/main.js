@@ -6,7 +6,7 @@ const numbersBox = document.querySelector('.numbers');
 const symbolsBox = document.querySelector('.symbols');
 const lowerBox = document.querySelector('.lower-letters');
 const upperBox = document.querySelector('.upper-letters');
-
+const copyText = document.querySelector(".output-copy");
 
 slider.value = 10;
 charLen.innerHTML = slider.value;
@@ -14,18 +14,13 @@ slider.onchange = function(){
     charLen.innerHTML = slider.value;
 }
 
-
-
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-const symbols = ['@', '!', '#', '$'];
+const symbols = ['@', '!', '#', '$', '&', '?'];
 
 const characterCode = Array.from(Array(26)).map((_, i) => i + 97);
-//console.log(characterCode);
 
 const lowercaseLetters = characterCode.map(code => String.fromCharCode(code));
 const uppercaseLetters = lowercaseLetters.map(letter => letter.toUpperCase());
-//console.log(lowercaseLetters);
-//console.log(uppercaseLetters);
 
 const generatePswd = (length, hasNumbers, hasSymbols, hasLower, hasUpper) =>{
     const availableCharacters = [
@@ -48,11 +43,22 @@ const generatePswd = (length, hasNumbers, hasSymbols, hasLower, hasUpper) =>{
     return password;
 }
 
-
-
 form.addEventListener("submit",(e) => {
     e.preventDefault();
     output.innerHTML = '';
     output.innerHTML = generatePswd(slider.value, numbersBox.checked, symbolsBox.checked, lowerBox.checked, upperBox.checked);
     
+});
+
+copyText.addEventListener("click", () => {
+  console.log(output.innerText);
+  let text = output.innerText;
+  navigator.clipboard.writeText(text).then(function() {
+    copyText.classList.add("copy-successfull");
+    setTimeout(function() {
+        copyText.classList.remove("copy-successfull");
+    }, 1500);
+  }, function(err) {
+    console.error('Async: Could not copy text: ', err);
+  });
 });
