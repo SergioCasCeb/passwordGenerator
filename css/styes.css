@@ -201,7 +201,6 @@ h1 {
   border-radius: 50%;
   background: var(--clr-light);
   cursor: pointer;
-  margin-top: -14px;
 }
 .generator-container .form input[type=range]::-moz-range-thumb {
   height: 2rem;
